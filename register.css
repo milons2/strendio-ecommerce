@@ -1,0 +1,199 @@
+/* Import Poppins font (or your preferred font) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+body {
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2); /* Softer gradient */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden; /* Prevent horizontal scroll on smaller screens */
+}
+
+.container {
+    max-width: 450px; /* Slightly smaller max-width */
+    width: 90%;
+    margin: 20px; /* Add some margin */
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+    backdrop-filter: blur(5px); /* Add blur effect */
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* More pronounced shadow */
+    border: none;
+    overflow: hidden;
+    transition: transform 0.3s ease; /* Add transition for hover effect */
+}
+
+.card:hover {
+    transform: scale(1.02); /* Slight scale on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.card-body {
+    padding: 30px;
+}
+
+.card-title {
+    color: #3b71ca;
+    font-weight: 600;
+    margin-bottom: 25px; /* Increased margin */
+}
+
+.form-control {
+    background: rgba(255, 255, 255, 0.7); /* Slightly transparent input background */
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    padding: 12px;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus {
+    background: white; /* Solid white on focus */
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+.form-select{
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    padding: 12px;
+}
+
+.form-label {
+    font-weight: 500;
+    color: #495057;
+    margin-bottom: 5px;
+}
+
+.btn-success {
+    background-color: #3b71ca;
+    border-color: #3b71ca;
+    border-radius: 8px;
+    padding: 12px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s; /* Add transform transition */
+}
+
+.btn-success:hover {
+    background-color: #3566b7;
+    border-color: #315c9e;
+    transform: scale(1.02); /* Slight scale on hover */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.error {
+    color: #dc3545;
+    font-size: small;
+    margin-top: 5px;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 576px) {
+    .card-body {
+        padding: 20px; /* Reduce padding on smaller screens */
+    }
+    .card-title{
+        font-size: 1.5rem;
+    }
+}
+/* ... (previous CSS) ... */
+
+.card {
+    /* ... (previous card styles) ... */
+    box-shadow: 0 0 10px 2px rgba(195, 207, 226, 0.5);
+    position: relative; /* Needed for absolute positioning of pseudo-elements */
+    overflow: hidden; /* Hide the overflow of the animation */
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background: linear-gradient(45deg, #fff, #e0eafc, #fff); /* Glowing gradient */
+    background-size: 400%; /* Make the gradient larger than the element */
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    z-index: -1; /* Place behind the card content */
+    border-radius: 15px;
+    animation: glowing 20s linear infinite; /* Apply the animation */
+    opacity: 0.7; /* Adjust opacity for subtle effect */
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+/* ... (previous CSS) ... */
+
+/* ... (Keep all your previous CSS, including the card, gradient, etc.) ... */
+
+/* Styles specifically for the "Already have an account?" section */
+.already-account {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #6c757d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign-in-link {
+    display: inline-block;
+    padding: 8px 16px;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    color: #007bff; /* Standard Bootstrap blue */
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Smooth transition */
+}
+
+.sign-in-link:hover {
+    color: #0056b3; /* Darker blue on hover */
+    background-color: #e9f2ff;
+    border-color: #0056b3;
+    text-decoration: none;
+}
+.already-account p{
+    margin-bottom: 0px;
+}
+.already-account::before {
+    content: "";
+    display: block;
+    width: 80%;
+    height: 1px;
+    background-color: #eee;
+    margin: 0 auto 15px;
+}
+/* ... (your existing CSS) ... */
+
+.sign-up-link {
+    color: #007bff; /* Match the "Sign in" link color */
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 16px;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.sign-up-link:hover {
+    background-color: #e9f2ff;
+    color: #0056b3;
+    border-color: #0056b3;
+    text-decoration: none;
+}

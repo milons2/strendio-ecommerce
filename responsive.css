@@ -1,0 +1,181 @@
+/* responsive.css - Styles for mobile */
+@media (max-width: 768px) {
+    body {
+        padding-top: 60px; /* Account for fixed header */
+        background-color: #e9ecef;
+    }
+
+    .dashboard-container {
+        flex-direction: column;
+    }
+
+    /* Mobile Header */
+    .dashboard-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        z-index: 100;
+        padding: 15px 20px;
+        border-bottom: 1px solid #ddd;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .mobile-toggle {
+        display: block;
+        font-size: 2.2rem;
+        cursor: pointer;
+        color: #007bff;
+    }
+
+    .user-info {
+        text-align: left;
+    }
+
+    .greeting {
+        font-size: 1.2rem;
+        margin-bottom: 2px;
+    }
+
+    .user-id {
+        font-size: 0.9rem;
+        color: #777;
+    }
+
+    /* Mobile Sidebar */
+    .sidebar {
+        position: fixed;
+        top: 60px; /* Below the header */
+        left: -280px; /* Initially hidden */
+        width: 280px;
+        height: calc(100vh - 60px);
+        background-color: #343a40;
+        z-index: 99;
+        overflow-y: auto;
+        padding-top: 20px;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .sidebar.active {
+        transform: translateX(280px);
+    }
+
+    .logo-section {
+        text-align: left;
+        padding-left: 20px;
+        margin-bottom: 30px;
+    }
+
+    .sidebar-nav li {
+        margin-bottom: 10px;
+    }
+
+    .sidebar-nav li a {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
+    .sidebar-nav li a i {
+        margin-right: 10px;
+        font-size: 1.1rem;
+    }
+
+    .badge {
+        font-size: 0.8rem;
+        padding: 4px 8px;
+    }
+
+    /* Main Content - Mobile */
+    .main-content {
+        padding: 20px;
+        padding-top: 15px; /* Adjust padding below fixed header */
+    }
+
+    /* Adjust section styles for mobile */
+    .my-account-section h2 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+
+    .account-details {
+        grid-template-columns: 1fr; /* Stack labels and values */
+        padding: 15px;
+    }
+
+    .action-buttons {
+        text-align: left;
+        margin-top: 20px;
+    }
+
+    .button {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
+    /* ... more mobile-specific styles for other sections ... */
+}
+
+/* Unique mobile styling for attraction */
+@media (max-width: 768px) {
+    body {
+        background-color: #f0f8ff; /* Light and inviting mobile background */
+    }
+
+    .dashboard-header {
+        background-color: #e0f2f7; /* Light header */
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+    }
+
+    .mobile-toggle {
+        color: #03a9f4; /* Vibrant toggle color */
+    }
+
+    .sidebar {
+        background-color: #263238; /* Darker sidebar for contrast */
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .logo {
+        color: #03a9f4; /* Vibrant logo color */
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+    }
+
+    .sidebar-nav li a {
+        color: #b0bec5;
+    }
+
+    .sidebar-nav li a:hover,
+    .sidebar-nav li a.active {
+        background-color: #03a9f4;
+        color: #fff;
+        box-shadow: 0 2px 4px rgba(3, 169, 244, 0.4);
+    }
+
+    .badge {
+        background-color: #ff9800; /* Attractive badge */
+        color: #fff;
+    }
+
+    .main-content {
+        background-color: #fff;
+        box-shadow: none; /* Remove main content shadow on mobile */
+    }
+
+    .my-account-section h2 {
+        color: #03a9f4;
+    }
+
+    .button.primary {
+        background-color: #03a9f4;
+    }
+
+    .button.primary:hover {
+        background-color: #0288d1;
+    }
+}

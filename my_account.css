@@ -1,0 +1,50 @@
+.account-container {
+    max-width: 600px;
+    margin: 30px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.account-details h2 {
+    margin-bottom: 20px;
+    color: #0056d2;
+}
+
+form label {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+form textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+button[type="submit"] {
+    background-color: #0056d2;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button[type="submit"]:hover {
+    background-color: #0041a8;
+}
