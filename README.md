@@ -37,14 +37,23 @@ It supports product browsing, cart system, guest checkout, and admin management.
 ### 🛍️ Product Page
 ![Product Page](screenshots/products.jpeg)
 
+### 🛍️ Product Details Page
+![Product Details Page](screenshots/product-details.jpeg)
+
 ### 🛒 Cart Page
 ![Cart Page](screenshots/cart.jpeg)
 
 ### 💳 Checkout Page
 ![Checkout Page](screenshots/checkout.jpeg)
 
+### 🛍️ Order Confirm Page
+![Order Confirm Page](screenshots/order-confirm.jpeg)
+
 ### 🧑‍💼 Admin Dashboard
 ![Admin Dashboard](screenshots/admin-dashboard.jpeg)
+
+### 🛍️ Inventory Management Page
+![Product-management Page](screenshots/product-management.jpeg)
 
 ---
 
